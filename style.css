@@ -1,4 +1,26 @@
-input::placeholder {
-    color: red;
-  }
+
+body
+{
+  font-family: 'Raleway', sans-serif;
+ 
+}
+
+header
+{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+#logo
+{
+  height: 19px;
+  width: 61.09px;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+}
+nav
+{
+  display: flex;
   
+}
