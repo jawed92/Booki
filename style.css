@@ -1,21 +1,328 @@
-
-body
-{
+body{
   font-family: 'Raleway', sans-serif;
- 
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-header
-{
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/************* Header **************/
+
+header { 
   display: flex;
-  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.logoBox { 
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+}
+
+#logo {
+  height: 19px;
+  width: 61px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.navUl{
+  display: flex;
+  margin-top: 0;
+  height: 100%;
+}
+
+header li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header li a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0px 40px 0px 40px;
+  height: 100%;
+} 
+
+header li a:hover
+{
+  color: #0065FC;
+  border-top: 0.2em solid #0065FC;
+}
+
+/*************Section Recherche************/
+
+main {
+  margin: 0px 20px 0px 20px;
+}
+
+main h1 {
+  font-size: 22px;
+}
+
+#recherche {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.position {
+  display: inline-block;
+  padding: 15px 15px 15px 15px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: #f2f2f2;
+}
+
+#champ {
+  height: 50px;
+  border-bottom: 1px solid #f2f2f2;
+  border-top: 1px solid #f2f2f2;
+  border-left: none;
+  border-right: none;
+  padding-left: 20px;
+}
+
+.recherche {
+  background: #0065FC;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 0px 20px 20px 0px;
+  height: 50px;
+  font-weight: bold;
+  width: 125px;
+}
+
+input::placeholder {
+  color: black;
+  font-weight: bold;
+  font-family: 'Raleway';
+  border: none;
+}
+
+/**************Section Filtres***********/
+
+#filtresCont {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.filtres {
+  display: flex;
+}
+
+.filtreIcon {
+  border-radius: 30px;
+  padding: 14px 17px 14px 17px;
+  color: #0065FC;
+}
+.filtre1, .filtre2, .filtre3, .filtre4 {
+  border-radius: 40px;
+    border: solid #f2f2f2 2px;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    margin-left: 25px;
+}
+
+#info {
+  display: flex;
+  align-items: center;
+}
+
+.fa-info {
+  font-size: 16px;
+  color: #0065fc;
+  border: 1px #d9d9d9 solid;
+  border-radius: 20px;
+  padding: 10px 15px 10px 15px;
+  margin-right: 10px;
+}
+
+/************Bloc Hebergement***********/
+
+#blocLogement {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#blocHebergement {
+  width: 69%;
+  margin-right: 30px;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titreHebergement {
+  font-size: 25px;
+  margin: 30px 0px 0px 30px;
+}
+
+#logements {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 230px;
+  box-shadow: 0px 5px 20px #999;
+  border-radius: 20px;
+  min-width: 220px;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.imageCard {
+  display: flex;
+  margin: 5px;
+  border-radius: 20px 20px 0px 0px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.imageCard img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 15px;
+}
+
+.cardBody h4 {
+ font-size: 15px;
+ margin: 4px 0px 4px 0px;
+}
+
+.cardBody p {
+  font-size: 15px;
+  margin: 4px 0px 4px 0px;
+}
+
+.imageEtoile {
+  color: #0065FC;
+}
+
+.gris {
+  color: #F2F2;
+}
+
+.afficher {
+  padding-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*************Bloc Aside***********/
+
+aside {
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.titrePopulaire {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
-#logo
-{
-  height: 19px;
-  width: 61.09px;
-  margin-left: 0.5em;
-  margin-top: 0.5em;
+.titrePopulaire h2 {
+  font-size: 25px;
+    margin: 30px 0px 0px 30px;
 }
+
+.titrePopulaire h2 i {
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+#cardAside {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.cardP {
+  display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 160px;  
+    box-shadow: 0px 5px 20px #999;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.cardP a {
+  display: flex;
+}
+
+.imageCardP {
+  margin: 5px;
+    border-radius: 20px 0px 0px 20px;
+    width: 33%;
+    overflow: hidden;
+}
+
+.imageCardP img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.cardBodyP {
+  padding: 15px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+}
+
+.cardBodyP h4 , p {
+  font-size: 15px;
+  margin: 4px 0px 4px 0px;
+}
+
+#blocActivite {
+  border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 35px 30px 70px 30px;
+}
+
+
