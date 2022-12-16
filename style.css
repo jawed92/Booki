@@ -75,12 +75,14 @@ main {
 
 main h1 {
   font-size: 22px;
+  margin-bottom: 0;
 }
 
 #recherche {
   display: flex;
   align-items: center;
   height: 100%;
+  margin-top: 20px;
 }
 
 .position {
@@ -90,6 +92,10 @@ main h1 {
   background-color: #f2f2f2;
 }
 
+.description {
+  font-size: 15px;
+  margin: 5px 0px 15px 0px;
+}
 #champ {
   height: 50px;
   border-bottom: 1px solid #f2f2f2;
@@ -146,6 +152,7 @@ input::placeholder {
 #info {
   display: flex;
   align-items: center;
+  margin-top: 25px;
 }
 
 .fa-info {
@@ -163,6 +170,7 @@ input::placeholder {
   display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 #blocHebergement {
@@ -176,15 +184,15 @@ input::placeholder {
 
 .titreHebergement {
   font-size: 25px;
-  margin: 30px 0px 0px 30px;
+  margin: 50px 0px 10px 37px;
 }
 
 #logements {
   display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 37px;
+    padding-right: 37px;
 }
 
 .card {
@@ -207,7 +215,7 @@ input::placeholder {
   display: flex;
   margin: 5px;
   border-radius: 20px 20px 0px 0px;
-  height: 140px;
+  height: 125px;
   overflow: hidden;
 }
 
@@ -234,6 +242,7 @@ input::placeholder {
 
 .imageEtoile {
   color: #0065FC;
+  margin-top: 12px;
 }
 
 .gris {
@@ -263,20 +272,24 @@ aside {
 
 .titrePopulaire h2 {
   font-size: 25px;
-    margin: 30px 0px 0px 30px;
+    margin: 50px 0px 10px 37px;
 }
 
 .titrePopulaire h2 i {
   padding-top: 30px;
   padding-right: 30px;
 }
+.titrePopulaire i {
+  font-size: 25px;
+    margin: 50px 37px 10px 0px;
+}
 
 #cardAside {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 37px;
+  padding-right: 37px;
 }
 
 .cardP {
@@ -296,7 +309,7 @@ aside {
 .imageCardP {
   margin: 5px;
     border-radius: 20px 0px 0px 20px;
-    width: 33%;
+    width: 58%;
     overflow: hidden;
 }
 
@@ -316,6 +329,10 @@ aside {
 .cardBodyP h4 , p {
   font-size: 15px;
   margin: 4px 0px 4px 0px;
+}
+
+.imageEtoileP {
+  margin-top: 48px;
 }
 
 #blocActivite {
