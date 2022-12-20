@@ -105,6 +105,21 @@ main h1 {
   padding-left: 20px;
 }
 
+button {
+  border-radius: 0 15px 15px 0;
+    background-color: #0065FC;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+button .fas {
+  display: none;
+}
+
 .recherche {
   background: #0065FC;
   color: #fff;
@@ -302,6 +317,11 @@ aside {
     margin-top: 30px;
     transition: all 0.3s ease-in-out;
 }
+
+.cardP:hover {
+  transform: scale(1.1);
+}
+
 .cardP a {
   display: flex;
 }
@@ -410,4 +430,139 @@ footer {
     gap: 20px;
 }
 
-/*********
+/************Tablette*************/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  * {
+    font-size:11px;
+  }
+
+/*************Header***********/
+
+  header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+      
+  }
+
+/*************Filtres**********/
+
+  #filtresCont {
+    width:100%;
+  }
+
+/************Section Bloc Logement Hebergement***********/
+
+  #blocLogement {
+    display:flex;
+    flex-direction: column;
+    gap:2em;
+  }
+   
+  #blocHebergement {
+    width:100%;
+  }
+  
+  #logements {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .card {
+    height: 190px;
+  }
+
+  .imageCard img {
+    height: 115px;
+  }
+  .cardBody {
+    margin-top: -14px;
+  }
+  .cardBody p, h4 {
+    margin:0;
+  }
+
+  .imageEtoile {
+    margin-top:0.5em
+  }
+
+/**************Aside*************/
+
+  aside {
+    width: 100%;
+    height: 329px;
+  }
+
+  #cardAside {
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cardP {
+    height: 140px;
+  }
+  .imageCardP {
+    width: 40%;
+  }
+
+  .cardBodyP {
+    padding: 5px 0px 0px 0px;
+  }
+
+  .imageEtoileP {
+    margin-top: 48px;
+  }
+
+/*************Bloc Activite**********/
+
+  .blocActivites {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #contenuActivite {
+    margin-top: 15px;
+  }
+
+  .cardActivite img {
+    height: 215px;
+  }
+
+  .cardBodyA h4 {
+    margin: 4px;
+  }
+
+/*************Footer*************/
+
+  footer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .footerCont ul {
+    gap: 9px;
+  }
+}
+/***************Mobile************/
+
+@media screen and (min-width: 320px) and (max-width:600px) {
+  
+/************Header************/
+/************Nav*************/
+/************Recherche***********/
+  button span {
+    display: none;
+  }
+
+  button .fas {
+    
+  }
+/************Filtres***********/
+
+
+
+  
+}
