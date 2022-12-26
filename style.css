@@ -683,18 +683,42 @@ footer {
     padding-right: 15px;
     margin-bottom: 40px;
   }
+
 /************Bloc Hebergement**********/
 
   #blocHebergement {
-    width: 100%;
     margin: 0;
     border-radius: 0;
     background-color: white;
+    width: 100%;
   }
 
-  #blocHebergement h2 {
+  .titreHebergement {
     margin-left: 15px;
-   
   }
 
+  #logements {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    height: 200px;
+  }
+
+  .cardBody h4 {
+    margin-top: 0;
+  }
+
+  .cardBody p {
+    margin-top: 0;
+  }
+
+  .imageEtoile {
+    margin-top: 0;
+  }
 }
