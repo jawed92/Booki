@@ -22,14 +22,14 @@ header {
   height: 100px;
 }
 
-.logoBox { 
+header a { 
   display: flex;
   align-items: center;
   height: 100%;
   margin-left: 20px;
 }
 
-#logo {
+header a img {
   height: 19px;
   width: 61px;
 }
@@ -41,7 +41,7 @@ nav {
   height: 100%;
 }
 
-.navUl{
+nav ul {
   display: flex;
   margin-top: 0;
   height: 100%;
@@ -78,6 +78,10 @@ main h1 {
   margin-bottom: 0;
 }
 
+.description {
+  margin-top: 15px;
+}
+
 #recherche {
   display: flex;
   align-items: center;
@@ -92,11 +96,8 @@ main h1 {
   background-color: #f2f2f2;
 }
 
-.description {
-  font-size: 15px;
-  margin: 5px 0px 15px 0px;
-}
-#champ {
+
+input {
   height: 50px;
   border-bottom: 1px solid #f2f2f2;
   border-top: 1px solid #f2f2f2;
@@ -150,12 +151,12 @@ input::placeholder {
   display: flex;
 }
 
-.filtreIcon {
+.filtres i {
   border-radius: 30px;
   padding: 14px 17px 14px 17px;
   color: #0065FC;
 }
-.filtre1, .filtre2, .filtre3, .filtre4 {
+.filtres a {
   border-radius: 40px;
     border: solid #f2f2f2 2px;
     display: flex;
@@ -551,13 +552,39 @@ footer {
 @media screen and (min-width: 320px) and (max-width:600px) {
   
   * {
-    font-size: 10px;
+    font-size: 13px;
   }
 
 /************Header************/
 
-  header {
+  header { 
+    display: flex;
+    margin: 20px 0px 20px 0px;
     flex-direction: column;
+  }
+
+  .logoBox {
+    margin-left: 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav li {
+    width: 50%;
+  }
+
+  nav li a {
+    width: 100%;
+    padding: 0;
+    display: flex;    
+    justify-content: space-around;
   }
 
   header li a:hover {
@@ -565,29 +592,65 @@ footer {
     border-bottom: 0.2em solid #0065FC;
 }
 
-/************Nav*************/
+/************Main************/
+
+  main {
+    margin: 0px 15px 0px 15px;
+  }
+
+  .description {
+    margin-top: 15px;
+  }
+
 /************Recherche***********/
+
+  input {
+    height: 42px;
+  }
+
+  button {
+    padding: 12px;
+  }
+
   button span {
     display: none;
   }
 
   button .fas {
-
+    display: inline-block;
   }
+
 /************Filtres***********/
 
   #filtresCont {
     flex-direction: column;
   }
 
-  .filtres {
-      gap: 15px;
-      display: grid;
-      flex-direction: column;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  #filtresCont h3 {
+    width: 100%;
   }
 
+  .filtres {
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+  }
+
+  .filtres a {
+   margin-left: 0;
+  }
+
+  .filtres i {
+    padding: 15px 4px 15px 8px;
+  }
+
+/**********Info*********/
+
+#info p {
+  padding-top: 20px;
+}
 /*************Bloc Logement**********/
 
   #blocLogement {
