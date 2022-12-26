@@ -198,7 +198,7 @@ input::placeholder {
   flex-direction: column;
 }
 
-.titreHebergement {
+#blocHebergement h2 {
   font-size: 25px;
   margin: 50px 0px 10px 37px;
 }
@@ -590,11 +590,14 @@ footer {
   header li a:hover {
     border-top: none;
     border-bottom: 0.2em solid #0065FC;
-}
+  }
 
-/************Main************/
+/************Main Section************/
 
-  main {
+  main { 
+    margin: 0;
+  }
+  section {
     margin: 0px 15px 0px 15px;
   }
 
@@ -648,13 +651,50 @@ footer {
 
 /**********Info*********/
 
-#info p {
-  padding-top: 20px;
-}
+  #info p {
+    padding-top: 20px;
+  }
+
 /*************Bloc Logement**********/
 
   #blocLogement {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   
+/************Bloc Populaire**********/
+
+  aside {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .titrePopulaire h2 {
+    margin-left: 15px;
+    margin-top: 25px;
+  }
+
+  .titrePopulaire i {
+    margin-right: 15px;
+    margin-top: 25px;
+  }
+
+  #cardAside {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
+  }
+/************Bloc Hebergement**********/
+
+  #blocHebergement {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    background-color: white;
+  }
+
+  #blocHebergement h2 {
+    margin-left: 15px;
+   
+  }
+
 }
