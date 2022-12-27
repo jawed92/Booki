@@ -756,4 +756,20 @@ footer {
     height: 150px;
   }
 
+/*************Footer*********/
+
+  footer {
+    width: 100%;
+    margin: 55px 0px 0px 0px;
+  }
+
+  #footerCont {
+    flex-direction: column;
+    margin-left: 15px;
+  }
+
+  .footerCont ul {
+    gap: 7px;
+  }
+
 }
