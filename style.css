@@ -66,7 +66,11 @@ header li a:hover
   color: #0065FC;
   border-top: 0.2em solid #0065FC;
 }
-
+header li a:active {
+  color: #0065FC;
+   border-top: 0.2em solid #0065FC;
+ }
+ 
 /*************Section Recherche************/
 
 main {
@@ -150,7 +154,11 @@ input::placeholder {
 .filtres {
   display: flex;
 }
-
+.filtres a:hover {
+  background-color: #DEEBFF;
+  box-shadow: 0 0 8px #d2d2d2;
+  transform: scale(1.1);
+}
 .filtres i {
   border-radius: 30px;
   padding: 14px 17px 14px 17px;
@@ -163,6 +171,7 @@ input::placeholder {
     align-items: center;
     padding-right: 15px;
     margin-left: 25px;
+    transition: all 0.3s ease-in-out;
 }
 
 #info {
@@ -218,7 +227,6 @@ input::placeholder {
   height: 230px;
   box-shadow: 0px 5px 20px #999;
   border-radius: 20px;
-  min-width: 220px;
   margin-top: 30px;
   transition: all 0.3s ease-in-out;
 }
@@ -230,8 +238,8 @@ input::placeholder {
 .imageCard {
   display: flex;
   margin: 5px;
-  border-radius: 20px 20px 0px 0px;
-  height: 125px;
+  border-radius: 15px 15px 0px 0px;
+  height: 140px;
   overflow: hidden;
 }
 
@@ -246,19 +254,18 @@ input::placeholder {
   padding: 0px 0px 0px 15px;
 }
 
-.cardBody h4 {
- font-size: 15px;
+.cardBody h4 , p {
+ font-size: 13px;
  margin: 4px 0px 4px 0px;
 }
 
-.cardBody p {
-  font-size: 15px;
-  margin: 4px 0px 4px 0px;
+.imagePrix {
+  margin: 0;
 }
-
 .imageEtoile {
   color: #0065FC;
   margin-top: 12px;
+  font-size: 14px;
 }
 
 .gris {
@@ -288,7 +295,7 @@ aside {
 
 .titrePopulaire h2 {
   font-size: 25px;
-    margin: 50px 0px 10px 37px;
+  margin: 50px 0px 10px 37px;
 }
 
 .titrePopulaire h2 i {
@@ -304,8 +311,8 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-left: 37px;
-  padding-right: 37px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .cardP {
@@ -329,9 +336,9 @@ aside {
 
 .imageCardP {
   margin: 5px;
-    border-radius: 20px 0px 0px 20px;
-    width: 58%;
-    overflow: hidden;
+  border-radius: 15px 0px 0px 15px;
+  width: 40%;
+  overflow: hidden;
 }
 
 .imageCardP img {
@@ -340,20 +347,25 @@ aside {
   width: 100%;
 }
 
-.cardBodyP {
-  padding: 15px 15px 0px 15px;
+.PcardBody {
+  padding: 3px 15px 0px 4px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 66%;
 }
 
-.cardBodyP h4 , p {
-  font-size: 15px;
-  margin: 4px 0px 4px 0px;
+.PcardBody h4 , p {
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .imageEtoileP {
-  margin-top: 48px;
+  margin-top: 25px;
+  padding-top: 30px;
+  color: #0065FC;
+  font-size: 15px;
 }
 
 /**************Bloc Activité**************/
@@ -385,6 +397,7 @@ aside {
     box-shadow: 0px 5px 20px #999;
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
+    height: 480px;
 }
 
 .cardActivite:hover {
@@ -408,6 +421,9 @@ aside {
   padding-left: 13px;
 }
 
+.cardBodyA h4 {
+  margin-top: 9px;
+}
 /***********Bloc Footer*********/
 
 footer {
@@ -436,7 +452,7 @@ footer {
 @media screen and (min-width: 769px) and (max-width: 992px) {
 
   * {
-    font-size:11px;
+    font-size:1em;
   }
 
 /*************Header***********/
@@ -448,12 +464,20 @@ footer {
       
   }
 
+/*************Recherche**********/
+
+ #recherche i {
+  font-size: 21px;
+ }
 /*************Filtres**********/
 
   #filtresCont {
     width:100%;
   }
 
+  .filtres {
+    font-size: 0.8em;
+  }
 /************Section Bloc Logement Hebergement***********/
 
   #blocLogement {
@@ -474,12 +498,10 @@ footer {
     height: 190px;
   }
 
-  .imageCard img {
+  .imageCard , img {
     height: 115px;
   }
-  .cardBody {
-    margin-top: -14px;
-  }
+
   .cardBody p, h4 {
     margin:0;
   }
@@ -492,29 +514,23 @@ footer {
 
   aside {
     width: 100%;
-    height: 329px;
+    height: 310px;
   }
 
   #cardAside {
     flex-direction: row;
-    gap: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    gap: 20px;
   }
 
   .cardP {
     height: 140px;
   }
   .imageCardP {
-    width: 40%;
+    width: 45%;
   }
-
-  .cardBodyP {
-    padding: 5px 0px 0px 0px;
-  }
-
+ 
   .imageEtoileP {
-    margin-top: 48px;
+    margin: 0;
   }
 
 /*************Bloc Activite**********/
@@ -527,15 +543,26 @@ footer {
   #contenuActivite {
     margin-top: 15px;
   }
+  
+  .cardActivite {
+    height: 265px;
+  }
 
   .cardActivite img {
     height: 215px;
   }
 
   .cardBodyA h4 {
-    margin: 4px;
+    font-size: 0.9em;
+    margin-top: 0;
   }
 
+  .image2ActiviteTitre , .image1ActiviteTitre {
+    padding-top: 9px;
+  }
+  .image4ActiviteTitre , .image5ActiviteTitre {
+    margin-top: 0;
+  }
 /*************Footer*************/
 
   footer {
@@ -543,6 +570,11 @@ footer {
     margin-right: 20px;
   }
 
+  #footerCont {
+    margin-left: 35px;
+    gap: 15px;
+    font-size: 0.8em;
+  }
   .footerCont ul {
     gap: 9px;
   }
@@ -609,11 +641,13 @@ footer {
 /************Recherche***********/
 
   input {
-    height: 42px;
+    height: 51px;
+    width: 100%;
   }
 
-  button {
-    padding: 12px;
+  .position {
+    font-size: 1.4em;
+    padding: 16px;
   }
 
   button span {
@@ -685,6 +719,14 @@ footer {
     margin-bottom: 40px;
   }
 
+  .cardP {
+    height: 140px;
+  }
+
+  .PcardBody {
+    padding: 0;
+    margin: 5px 5px 5px 10px;
+  }
 /************Bloc Hebergement**********/
 
   #blocHebergement {
@@ -711,18 +753,17 @@ footer {
     height: 200px;
   }
 
-  .cardBody h4 {
-    margin-top: 0;
+  .imageCard {
+    height: 119px;
   }
 
-  .cardBody p {
-    margin-top: 0;
+  .cardBody {
+    margin-top: 7px;
   }
 
   .imageEtoile {
-    margin-top: 0;
+    margin-top: 5px;
   }
-
 /************Bloc Activités***********/
 
   .blocActivites {
@@ -749,6 +790,7 @@ footer {
     box-shadow: 0px 5px 20px #999;
     border-radius: 20px;
     margin-top: 30px;
+    
   }
 
   .cardActivite img {
@@ -766,11 +808,11 @@ footer {
 
   #footerCont {
     flex-direction: column;
-    margin-left: 15px;
+    margin-left: 20px;
   }
 
   .footerCont ul {
-    gap: 7px;
+    gap: 10px;
   }
 
 }
