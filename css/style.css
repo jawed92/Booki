@@ -714,13 +714,14 @@ footer {
   }
 
   #cardAside {
-    padding-left: 15px;
-    padding-right: 15px;
     margin-bottom: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .cardP {
-    height: 140px;
+    height: 200px;
+    width: 100%;
   }
 
   .PcardBody {
